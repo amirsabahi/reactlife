@@ -1,9 +1,17 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Profile from './components/profile'
+
+const user = {
+  id:1,
+  imageId: '7vQD0fPs',
+  name: 'Amir Sabahi'
+}
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Profile user={user} alt={user.name} ></Profile>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
